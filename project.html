@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whot Card Game</title>
+    <link rel="stylesheet" href="project.css">
+    <!-- <link rel="stylesheet" href="animation.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="frame">
+        <div class="card-container">
+            <div class="indication">
+                <h4 style="color: #fff;">Your Cards:</h4>
+                <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
+            </div>
+            <div id="getcard">
+                <!-- <div class="cards1 hidden playercard" data-number = "14" data-shape="star">
+                    <i class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
+                    <div>
+                        <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
+                        <p class="edge" style=" font-size:20px; font-weight: 500;">14</p>
+                    </div>
+                    <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
+                    <p class="edge1" style=" font-size:20px; font-weight: 500;">14</p>
+                </div>
+                <div class="cards1 hidden playercard" data-number="6" data-shape="star">
+                    <i class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
+                    <div>
+                        <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
+                        <p class="edge" style=" font-size:20px; font-weight: 500;"> 6</p>
+                    </div>
+                    <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
+                    <p class="edge1" style=" font-size:20px; font-weight: 500;">6</p>
+                </div>
+                <div class="cards1 hidden playercard" data-number="3" data-shape="circle">
+                    <i class="fa-solid fa-circle fa-4x" style="color: #800808;"></i>
+                    <div>
+                        <i class="fa-solid fa-circle fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
+                        <p class="edge" style=" font-size:20px; font-weight: 500;"> 3</p>
+                    </div>
+                    <i class="fa-solid fa-circle fa-lg" style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
+                    <p class="edge1" style=" font-size:20px; font-weight: 500;">3</p>
+                </div>
+                <div class="cards1 hidden playercard" data-number="6" data-shape="square">
+                    <i class="fa-solid fa-square fa-4x" style="color: #800808;"></i>
+                    <div>
+                        <i class="fa-solid fa-square fa-lg" style="color: #800808; position: absolute; left: 5px; top: 40px;"></i>
+                        <p class="edge" style=" font-size:20px; font-weight: 500;">6</p>
+                    </div>
+                    <i class="fa-solid fa-square fa-lg" style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
+                    <p class="edge1" style=" font-size:20px; font-weight: 500;">6</p>
+                </div> -->
+            </div>
+        </div>
+
+
+        <div class="center-deck">
+            <h3 style="font-size: 16px; width: 120px;">HINT:MATCH SHAPE OR NUMBER!</h3>
+            <div class="cards hidden" data-number="" data-shape="">
+                <!-- <i class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
+                <div>
+                    <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
+                    <p class="edge" style=" font-size:20px; font-weight: 500;">14</p>
+                </div>
+                <i class="fa-solid fa-star fa-lg "
+                    style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
+                <p class="edge1" style=" font-size:20px; font-weight: 500;">14</p> -->
+            </div>
+        </div>
+
+
+        <div class="opposition">
+            <div id="card-specified">
+                <div class="gen-market back-facing" id="market" style="margin-top: 20px;">
+                    <p id="1">whot</p>
+                    <p id="flip">whot</p>
+                </div>
+                <h3 style="margin: 6px; color: #fff;">General Market.</h3>
+            </div>
+            <div id="card-specified">
+                <h3 style="margin: 6px;">Player 2 waiting.....</h3>
+                <div class="back-facing">
+                    <p id="1">whot</p>
+                    <p id="flip">whot</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>

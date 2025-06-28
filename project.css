@@ -1,0 +1,133 @@
+*{    
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: rgb(137, 62, 62);
+}
+
+
+.frame{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.card-container{
+    /* width: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indication{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 35px;
+    justify-content: space-between;
+}
+
+#getcard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards1{
+    margin: 2px;
+    width: 120px;
+    height: 170px;
+    position: relative;
+    /* transition: all ease-in 0.7s; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hidden{
+    cursor: pointer;
+    height: 130px;
+    width: 117px;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: #727676 0px 2px 13px 0px;
+    border-radius: 13px;
+}
+
+.edge{
+    position:absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.edge1{
+    position:absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+/* .cards1:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+} */
+
+
+.center-deck{
+    width: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.cards{
+    transform: scale(1.25);
+    position: relative;
+    /* transition: all ease-in 0.7s; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.center-deck .hidden{
+    box-shadow: #000 0px 2px 13px 0px;
+}
+
+
+.opposition{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.back-facing{
+    cursor: pointer;
+    height: 167px;
+    width: 150px;
+    background-color: #800808;
+    box-shadow: #000000 0px 2px 13px 0px;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.back-facing p{
+    font-size: 34px;
+    color: #ffffff;
+}
+
+#flip{
+    rotate: 180deg;
+}
