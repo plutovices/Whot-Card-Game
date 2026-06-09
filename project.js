@@ -1,23 +1,22 @@
-// 1. Variables and Selectors
 const cardContainer = document.querySelector("#getcard");
 const centerDeck = document.querySelector(".center-deck .cards");
 const market = document.querySelector("#market");
 const whotPack = [];
 const shapes = ["circle", "square", "play", "star", "cross"];
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15];
 
 
-// 2. Game Initialization
+//  Game Initialization
 createCardPack();
 shuffleDeck(whotPack);
 initializeGame();
 
 
-// 3. Event Listener for Market Click
+//  Event Listener for Market Click
 market.addEventListener("click", drawCardFromMarket);
 
 
-// 4. Card Pack Creation
+//  Card Pack Creation
 function createCardPack() {
     shapes.forEach((shape) => {
         numbers.forEach((number) => {
@@ -27,7 +26,7 @@ function createCardPack() {
 }
 
 
-// 5. Shuffle Deck
+//  Shuffle Deck
 function shuffleDeck(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -36,7 +35,7 @@ function shuffleDeck(deck) {
 }
 
 
-// 6. Initialize the Game
+//  Initialize the Game
 function initializeGame() {
     for (let i = 0; i < 5; i++) {
         drawCardFromMarket();
@@ -47,7 +46,7 @@ function initializeGame() {
 }
 
 
-// 7. Draw a Card from Market
+// . Draw a Card from Market
 function drawCardFromMarket() {
     if (whotPack.length === 0) {
         alert("No more cards in the market!");
@@ -59,7 +58,7 @@ function drawCardFromMarket() {
 }
 
 
-// 8. Create Card Element
+//  Create Card Element
 function createCardElement(card, isCenterDeck = false) {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("cards1", "hidden", "playercard");
@@ -82,7 +81,7 @@ function createCardElement(card, isCenterDeck = false) {
 }
 
 
-// 9. Update the Center Deck
+//  Update the Center Deck
 function updateCenterDeck(card) {
     centerDeck.innerHTML = "";
     centerDeck.dataset.number = card.number;
@@ -94,7 +93,7 @@ function updateCenterDeck(card) {
 }
 
 
-// 10. Card Play Event Listener
+//  Card Play Event Listener
 cardContainer.addEventListener("click", (event) => {
     const clickedCard = event.target.closest(".playercard");
     if (clickedCard && isValidCard(clickedCard, centerDeck)) {
@@ -105,7 +104,7 @@ cardContainer.addEventListener("click", (event) => {
 });
 
 
-// 11. Validate the Card
+//  Validate the Card
 function isValidCard(card, centerDeck) {
     const { number: cardNumber, shape: cardShape } = card.dataset;
     const { number: centerNumber, shape: centerShape } = centerDeck.dataset;
@@ -114,7 +113,7 @@ function isValidCard(card, centerDeck) {
 }
 
 
-// 12. Play the Card to the Center Deck
+//  Play the Card to the Center Deck
 function playCardToCenterDeck(card) {
     card.remove();
 
