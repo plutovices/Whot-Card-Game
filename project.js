@@ -1,22 +1,22 @@
 const cardContainer = document.querySelector("#getcard");
+const bgContainer = document.querySelector(".frame");
 const centerDeck = document.querySelector(".center-deck .cards");
 const market = document.querySelector("#market");
 const whotPack = [];
 const shapes = ["circle", "square", "play", "star", "cross"];
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,15];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
 
-//  Game Initialization
 createCardPack();
 shuffleDeck(whotPack);
 initializeGame();
 
 
-//  Event Listener for Market Click
+
 market.addEventListener("click", drawCardFromMarket);
 
 
-//  Card Pack Creation
+
 function createCardPack() {
     shapes.forEach((shape) => {
         numbers.forEach((number) => {
@@ -26,7 +26,7 @@ function createCardPack() {
 }
 
 
-//  Shuffle Deck
+
 function shuffleDeck(deck) {
     for (let i = deck.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
