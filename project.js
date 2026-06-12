@@ -1,11 +1,12 @@
 const cardContainer = document.querySelector("#getcard");
-const bgContainer = document.querySelector(".frame");
+const bgContainer = document.querySelector("#background");
+const frame = document.querySelector(".frame");
 const centerDeck = document.querySelector(".center-deck .cards");
 const market = document.querySelector("#market");
 const whotPack = [];
 const shapes = ["circle", "square", "play", "star", "cross"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
-
+const floaters = []; //object
 
 createCardPack();
 shuffleDeck(whotPack);
@@ -16,7 +17,50 @@ initializeGame();
 market.addEventListener("click", drawCardFromMarket);
 
 
+for (let i=0; i<22; i++){
+    const element = document.createElement("div");
+    const float_shape = shapes[Math.floor( Math.random() * 5)];
+    element.className = `fa-solid fa-${float_shape} fa-5x floater`;
+    
+    
+    bgContainer.appendChild(element);
+    
+    floaters.push({
+        element,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        speed: 0.3 + Math.random() * 0.8,
+        offset: Math.random()* 100 //random horizontal postion in the sway
+    })
 
+}
+
+let time =0;
+
+function animate(){
+    time += 0.02;
+    floaters.forEach(floater => {
+
+        floater.y -= floater.speed;
+
+        floater.x += Math.sin(time + floater.offset) *0.35;
+        if( floater.y < -800){
+            floater.y = window.innerHeight + 50;
+            floater.x = Math.random() * window.innerWidth;
+        }
+        console.log(floater.y)
+
+        floater.element.style.transform = `translate(${floater.x}px, ${floater.y}px)`;
+
+    });
+
+    requestAnimationFrame(animate);
+
+}
+
+ animate();
+
+ 
 function createCardPack() {
     shapes.forEach((shape) => {
         numbers.forEach((number) => {
