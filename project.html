@@ -14,28 +14,37 @@
     <div id="background">
     
     <div class="frame">
-        <div class="card-container">
-            <div class="indication">
+        <div class="card-container" style="position: relative;"">
+
+             <div class="arrow-right" style="position: absolute; z-index: 5; height: 50px; width: 50px; top: 30%;right: 0;">
+                <i class="fa-solid fa-circle-right fa-3x" style="color: rgb(255, 255, 255);"></i>
+             </div>
+
+             <div class="arrow-left" style="position: absolute; z-index: 5; height: 50px; width: 50px; top: 30%; left: 0;">
+                <i class="fa-solid fa-circle-left fa-3x" style="color: rgb(255, 255, 255);"></i>
+             </div>
+            <!-- <div class="indication">
                 <h4 style="color: #fff;">Your Cards:</h4>
                 <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
-            </div>
+            </div> -->
             <div id="getcard">
              
             </div>
         </div>
+        
 
 
         <div class="center-deck">
             <h3 style="font-size: 16px; width: 120px;">HINT:MATCH SHAPE OR NUMBER!</h3>
             <div class="cards hidden" data-number="" data-shape="">
-                <!-- <i class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
+                <i class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
                 <div>
                     <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
                     <p class="edge" style=" font-size:20px; font-weight: 500;">14</p>
                 </div>
                 <i class="fa-solid fa-star fa-lg "
                     style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
-                <p class="edge1" style=" font-size:20px; font-weight: 500;">14</p> -->
+                <p class="edge1" style=" font-size:20px; font-weight: 500;">14</p>
             </div>
         </div>
 

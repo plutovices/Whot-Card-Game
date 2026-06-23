@@ -7,6 +7,8 @@ const whotPack = [];
 const shapes = ["circle", "square", "play", "star", "cross"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 const floaters = []; //object
+const leftBtn = document.querySelector(".arrow-left");
+const rightBtn = document.querySelector(".arrow-right");
 
 createCardPack();
 shuffleDeck(whotPack);
@@ -15,6 +17,21 @@ initializeGame();
 
 
 market.addEventListener("click", drawCardFromMarket);
+
+leftBtn.onclick = () => {
+    cardContainer.scrollBy({
+        left: -300,
+        behavior: "smooth"
+    });
+};
+
+rightBtn.onclick = () => {
+    cardContainer.scrollBy({
+        left: 300,
+        behavior: "smooth"
+    });
+};
+
 
 
 for (let i=0; i<22; i++){
@@ -48,7 +65,7 @@ function animate(){
             floater.y = window.innerHeight + 50;
             floater.x = Math.random() * window.innerWidth;
         }
-        console.log(floater.y)
+        // console.log(floater.y)
 
         floater.element.style.transform = `translate(${floater.x}px, ${floater.y}px)`;
 
@@ -99,6 +116,10 @@ function drawCardFromMarket() {
     const card = whotPack.pop();
     const cardElement = createCardElement(card);
     cardContainer.appendChild(cardElement);
+    //  if (cardContainer.querySelectorAll('div').length > 6){
+    //     console.log("alertttt!!!!!!!!")
+    //     cardContainer.style.background = " linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.9) 100%)"
+    //   }
 }
 
 
@@ -136,6 +157,7 @@ function updateCenterDeck(card) {
     centerDeck.appendChild(cardElement);
 }
 
+console.log(document.querySelectorAll(".cards").length);
 
 //  Card Play Event Listener
 cardContainer.addEventListener("click", (event) => {
