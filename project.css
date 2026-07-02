@@ -63,9 +63,45 @@ body{
     gap: 2px;
     overflow-x: scroll;
     scrollbar-width: none;
-    mask: linear-gradient(90deg, transparent, white 12%, white 88%, transparent);
+    /* mask: linear-gradient(90deg, transparent, white 12%, white 88%, transparent); */
     padding-left: 25px;
     padding-right: 25px;
+}
+
+#getcard::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;   
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s ease;
+    background:
+        linear-gradient(
+            to right,
+            rgba(145,67,67,1),
+            rgba(145,67,67,0)
+        );
+}
+
+#getcard::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .2s ease;
+    background:
+        linear-gradient(
+            to left,
+            rgba(145,67,67,1),
+            rgba(145,67,67,0)
+        );
+    
 }
 
 .cards1{
