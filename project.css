@@ -196,3 +196,29 @@ body{
 #flip{
     rotate: 180deg;
 }
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+
+    z-index: 1000;
+}
+
+.modal {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1001;
+}
+
+.modal button {
+    padding: 10px 20px;
+    cursor: pointer;
+}

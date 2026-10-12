@@ -1,9 +1,11 @@
 {
   "name": "defence-project(whot-game)",
   "version": "1.0.0",
+  "description": "",
   "main": "project.js",
   "scripts": {
-    "start": "tsc --watch"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
@@ -12,12 +14,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/plutovices/Whot-Card-Game/issues"
   },
   "homepage": "https://github.com/plutovices/Whot-Card-Game#readme",
-  "description": "",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "vite": "^8.3.4"
   }
 }
