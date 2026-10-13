@@ -1,5 +1,7 @@
 import { useState } from "react";
-import CircleX from "lucide-react/dist/esm/icons/circle-x";
+import { CircleX }  from "lucide-react";
+
+
 
 
 function Modal() {
