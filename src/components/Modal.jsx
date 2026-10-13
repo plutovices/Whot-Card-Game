@@ -1,67 +1,45 @@
 import { useState } from "react";
+import CircleX from "lucide-react/dist/esm/icons/circle-x";
 
-
-// function Modal() {
-//     const [showModal, setShowModal] = useState(true);
-
-//     return (
-//         <div>
-           
-
-//             {/* Modal and blurred background */}
-//             {showModal && (
-//                 <div className="overlay">
-//                     <div className="modal">
-//                         <h2>Welcome!</h2>
-//                         <p>Make We Play Whot</p>
-
-//                         <div className="dice">
-//                             <div className="dot"></div>
-//                             <div className="dot"></div>
-//                             <div className="dot"></div>
-//                             <div className="dot"></div>
-//                             <div className="dot"></div>
-//                             <div className="dot"></div>
-//                         </div>
-
-//                         <button onClick={() => setShowModal(false)}>
-//                             Continue
-//                         </button>
-//                     </div>
-//                 </div>
-//             )}
-//         </div>
-//     );
-// }
 
 function Modal() {
+    const [showModal, setShowModal] = useState(true);
+
     return (
-        <div style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0, 0, 0, 0.5)",
-            backdropFilter: "blur(6px)",
-            display: "grid",
-            placeItems: "center",
-            zIndex: 1000
-        }}>
-            <div style={{
-                background: "white",
-                color: "black",
-                padding: "30px",
-                borderRadius: "12px",
-                textAlign: "center"
-            }}>
-                <h2>Welcome to Whot!</h2>
-                <p>Ready to play?</p>
-                <button onClick={() => {
-                    document.getElementById("react-root").style.display = "none";
-                }}>
-                    Continue
-                </button>
-            </div>
+        <div>
+           
+
+            {/* Modal and blurred background */}
+            {showModal && (
+                <div className="overlay">
+                    <CircleX />
+                    
+                    <div className="modal">
+                        <div className="text">
+                            <h2 className="modal-text">Welcome!</h2>
+                            <p className="modal-text">Make We Play Whot</p>
+                        </div>
+                        
+
+                        <div className="dice">
+                            <div className="dot"></div>
+                            <div className="dot"></div>
+                            <div className="dot"></div>
+                            <div className="dot"></div>
+                            <div className="dot"></div>
+                            <div className="dot"></div>
+                        </div>
+
+                        <button className="modal-button" onClick={() => setShowModal(false)}>
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
+
+
 
 export default Modal;

@@ -213,12 +213,28 @@ body{
 .modal {
     background: white;
     padding: 30px;
-    border-radius: 12px;
+    width: 380px;
+    height: 200px;
+    border: 3px solid #800808;
+    border-radius: 4px;
     text-align: center;
     z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.modal-text {
+    font-family: "VT323", monospace;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .modal button {
+    width :auto;
     padding: 10px 20px;
     cursor: pointer;
 }

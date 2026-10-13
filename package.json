@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/plutovices/Whot-Card-Game#readme",
   "dependencies": {
+    "lucide-react": "^1.56.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
   },

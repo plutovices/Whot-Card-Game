@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whot Card Game</title>
     <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="animation.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -17,20 +20,21 @@
     <div class="frame">
         <div class="card-container" style="position: relative;">
 
-             <div class="arrow-right" style="position: absolute; z-index: 5; height: 50px; width: 50px; top: 30%;right: 0;">
-                <i class="fa-solid fa-circle-right fa-3x" style="color: rgb(255, 255, 255);"></i>
+            <div class="arrow-left" style="position: relative; z-index: 5;box-shadow: #000 2px 1px 7px 1px; border-radius: 50%;">
+                <i class="fa-solid fa-circle-left fa-2x" style="color: rgb(255, 255, 255);"></i>
              </div>
-
-             <div class="arrow-left" style="position: absolute; z-index: 5; height: 50px; width: 50px; top: 30%; left: 0;">
-                <i class="fa-solid fa-circle-left fa-3x" style="color: rgb(255, 255, 255);"></i>
-             </div>
+            
             <!-- <div class="indication">
                 <h4 style="color: #fff;">Your Cards:</h4>
                 <i class="fa-solid fa-arrow-right" style="color: #ffffff;"></i>
             </div> -->
-            <div id="getcard">
-             
+            <div id="getcard"></div>
+            
+            <div class="arrow-right" style="position: relative; z-index: 5; box-shadow: #000 -2px 1px 7px 1px; border-radius: 50%;">
+               <i class="fa-solid fa-circle-right fa-2x" style="color: rgb(255, 255, 255);"></i>
             </div>
+            
+            
         </div>
         
 
