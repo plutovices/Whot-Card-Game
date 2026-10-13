@@ -7,6 +7,10 @@ import { CircleX }  from "lucide-react";
 function Modal() {
     const [showModal, setShowModal] = useState(true);
 
+    const handleCloseModal = () => {
+        setShowModal(false);
+    }
+
     return (
         <div>
            
@@ -14,7 +18,6 @@ function Modal() {
             {/* Modal and blurred background */}
             {showModal && (
                 <div className="overlay">
-                    <CircleX />
                     
                     <div className="modal">
                         <div className="text">
@@ -23,17 +26,8 @@ function Modal() {
                         </div>
                         
 
-                        <div className="dice">
-                            <div className="dot"></div>
-                            <div className="dot"></div>
-                            <div className="dot"></div>
-                            <div className="dot"></div>
-                            <div className="dot"></div>
-                            <div className="dot"></div>
-                        </div>
-
-                        <button className="modal-button" onClick={() => setShowModal(false)}>
-                            Continue
+                        <button className={`modal-button ${showModal ? '' : 'disappear'}`} onClick={handleCloseModal}>
+                            Start
                         </button>
                     </div>
                 </div>

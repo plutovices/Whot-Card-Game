@@ -5,7 +5,7 @@
 
 
 body{
-    background-color: rgb(137, 62, 62);
+    background-color: var(--bg-color);
     overflow: hidden;
 }
 
@@ -179,7 +179,7 @@ body{
     cursor: pointer;
     height: 167px;
     width: 150px;
-    background-color: #800808;
+    background-color: var(--primary-color);
     box-shadow: #000000 0px 2px 13px 0px;
     border-radius: 13px;
     display: flex;
@@ -215,13 +215,14 @@ body{
     padding: 30px;
     width: 380px;
     height: 200px;
-    border: 3px solid #800808;
+    border: 3px solid var(--primary-color);
     border-radius: 4px;
     text-align: center;
     z-index: 1001;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    animation: modalEntrance 0.6s ease-out both;
 }
 
 
@@ -233,8 +234,57 @@ body{
     font-style: normal;
 }
 
-.modal button {
+.modal-button {
     width :auto;
     padding: 10px 20px;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in;
+}
+
+.modal-button:hover {
+    background-color: #4a0f0a;
+}
+
+.disappear {
+    animation: modalExit 0.6s ease-out both;
+}
+
+@keyframes modalExit {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes modalEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+/* 
+.modal-button:focus {
+    background-color: #4f0f0f;
+} */
+
+:root{
+    --dice-size: 20px;
+    --primary-color: #800808;
+    --bg-color: rgb(137, 62, 62);
 }
