@@ -244,7 +244,7 @@ body{
     color: white;
     font-family: "Archivo Black", sans-serif;
     font-weight: 500;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.2s ease-in;
 }
 
 .modal-button:hover {
@@ -283,8 +283,70 @@ body{
     background-color: #4f0f0f;
 } */
 
+
+.card-animation {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 95px;
+    margin: 0 auto;
+}
+.animated-card{
+    scale: 0.7;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.card-left {
+    animation: fanLeft 5s ease-in-out infinite;
+}
+
+.card-middle {
+    animation: fanMiddle 5s ease-in-out infinite;
+}
+
+.card-right {
+    animation: fanRight 5s ease-in-out infinite;
+}
+
+@keyframes fanLeft {
+    0%, 12%, 94%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    32%, 80% {
+        transform: translateX(-22px) rotate(-22deg);
+    }
+}
+
+@keyframes fanMiddle {
+    0%, 12%, 94%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    32%, 80% {
+        transform: translateX(0) rotate(0deg);
+    }
+}
+
+@keyframes fanRight {
+    0%, 12%, 94%, 100% {
+        transform: translateX(0) rotate(0deg);
+    }
+
+    32%, 80% {
+        transform: translateX(22px) rotate(22deg);
+    }
+}
+
+
+i{
+    cursor: pointer;
+}
+
 :root{
-    --dice-size: 20px;
     --primary-color: #800808;
     --bg-color: rgb(137, 62, 62);
 }

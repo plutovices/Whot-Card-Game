@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { CircleX }  from "lucide-react";
 
 
 
@@ -24,7 +23,8 @@ function Modal() {
                             <h2 className="modal-text">Welcome!</h2>
                             <p className="modal-text">Make We Play Whot</p>
                         </div>
-                        
+                          
+                          <CardAnimation/>
 
                         <button className={`modal-button ${showModal ? '' : 'disappear'}`} onClick={handleCloseModal}>
                             Start
@@ -36,6 +36,26 @@ function Modal() {
     );
 }
 
-
+function CardAnimation() {
+    return (
+        <div className="card-animation">
+         <img
+                src="/cards/Star2.svg"
+                className="animated-card card-left"
+                alt="animated card"
+            />
+            <img
+                src="/cards/Triangle2.svg"
+                className="animated-card card-middle"
+                alt="animated card"
+            />
+            <img
+                src="/cards/circle2.svg"
+                className="animated-card card-right"
+                alt="animated card"
+            />
+        </div>
+    );
+}
 
 export default Modal;
