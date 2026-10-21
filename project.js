@@ -1,7 +1,7 @@
 const cardContainer = document.querySelector("#getcard");
 const bgContainer = document.querySelector("#background");
 const frame = document.querySelector(".frame");
-const centerDeck = document.querySelector(".center-deck .cards");
+const centerDeck = document.querySelector(".center-deck .center-card");
 const market = document.querySelector("#market");
 const whotPack = [];
 const shapes = ["circle", "square", "play", "star", "cross"];
@@ -126,14 +126,29 @@ function drawCardFromMarket() {
 //  Create Card Element
 function createCardElement(card, isCenterDeck = false) {
     const cardDiv = document.createElement("div");
-    cardDiv.classList.add("cards1", "hidden", "playercard");
+   isCenterDeck ? "" : cardDiv.classList.add("cards1", "hidden", "playercard");
     cardDiv.dataset.number = card.number;
     cardDiv.dataset.shape = card.shape;
 
     const sizeClass = isCenterDeck ? "fa-4x" : "fa-4x";
     const numberFontSize = isCenterDeck ? "20px" : "20px";
 
-    cardDiv.innerHTML = `
+    cardDiv.innerHTML = isCenterDeck ?
+     `
+       <i  class="fa-solid fa-${card.shape} ${sizeClass} fa-4x" style="color: #800808; "></i>
+                 <div>
+                    <i class="fa-solid fa-${card.shape} ${sizeClass} fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
+                    <p class="edge" style=" font-size:20px; font-weight: 500;">${card.number}</p>
+                </div>
+                 <div>
+                    <i class="fa-solid fa-${card.shape} ${sizeClass} fa-lg "
+                    style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
+                   <p class="edge1" style=" font-size:20px; font-weight: 500;">${card.number}</p>
+               </div>
+     `
+    
+    
+    : `
         <i class="fa-solid fa-${card.shape} ${sizeClass}" style="color: #800808;"></i>
         <div>
             <i class="fa-solid fa-${card.shape} fa-lg" style="color: #800808; position: absolute; left: 5px; top: 40px;"></i>
@@ -144,6 +159,8 @@ function createCardElement(card, isCenterDeck = false) {
     
     return cardDiv;
 }
+
+
 
 
 //  Update the Center Deck

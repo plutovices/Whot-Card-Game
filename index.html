@@ -16,11 +16,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div id="react-root"></div>
+    <!-- <div id="react-root"></div> -->
     <div id="background">
     
     <div class="frame">
-        <div class="card-container" style="position: relative;">
+        <div class="playercard-container" style="position: relative;">
 
             <div class="arrow-left" style="position: relative; z-index: 5;box-shadow: #000 2px 1px 7px 1px; border-radius: 50%;">
                 <i class="fa-solid fa-circle-left fa-2x" style="color: rgb(255, 255, 255);"></i>
@@ -43,15 +43,20 @@
 
         <div class="center-deck">
             <h3 style="font-size: 16px; width: 120px;">HINT:MATCH SHAPE OR NUMBER!</h3>
-            <div class="cards hidden" data-number="" data-shape="">
-                <i class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
-                <div>
+            <div class="center-card" data-number="" data-shape="">
+                <i  class="fa-solid fa-star fa-4x" style="color: #800808;"></i>
+                 <div>
                     <i class="fa-solid fa-star fa-lg" style="color: #800808; position: absolute;left: 5px; top: 40px;"></i>
                     <p class="edge" style=" font-size:20px; font-weight: 500;">14</p>
                 </div>
-                <i class="fa-solid fa-star fa-lg "
+                 <div>
+                    <i class="fa-solid fa-star fa-lg "
                     style="color: #800808; position: absolute;right: 5px; bottom: 40px;"></i>
-                <p class="edge1" style=" font-size:20px; font-weight: 500;">14</p>
+                   <p class="edge1" style=" font-size:20px; font-weight: 500;">14</p>
+               </div>
+                    
+            
+                
             </div>
         </div>
 
